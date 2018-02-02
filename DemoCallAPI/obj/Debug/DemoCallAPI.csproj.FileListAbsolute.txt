@@ -1,0 +1,11 @@
+D:\Git\MDM\DemoCallAPI\DemoCallAPI\bin\Debug\DemoCallAPI.exe.config
+D:\Git\MDM\DemoCallAPI\DemoCallAPI\bin\Debug\DemoCallAPI.exe
+D:\Git\MDM\DemoCallAPI\DemoCallAPI\bin\Debug\DemoCallAPI.pdb
+D:\Git\MDM\DemoCallAPI\DemoCallAPI\bin\Debug\Newtonsoft.Json.dll
+D:\Git\MDM\DemoCallAPI\DemoCallAPI\bin\Debug\System.Net.Http.Formatting.dll
+D:\Git\MDM\DemoCallAPI\DemoCallAPI\bin\Debug\Newtonsoft.Json.xml
+D:\Git\MDM\DemoCallAPI\DemoCallAPI\bin\Debug\System.Net.Http.Formatting.xml
+D:\Git\MDM\DemoCallAPI\DemoCallAPI\obj\Debug\DemoCallAPI.csprojResolveAssemblyReference.cache
+D:\Git\MDM\DemoCallAPI\DemoCallAPI\obj\Debug\DemoCallAPI.csproj.CoreCompileInputs.cache
+D:\Git\MDM\DemoCallAPI\DemoCallAPI\obj\Debug\DemoCallAPI.exe
+D:\Git\MDM\DemoCallAPI\DemoCallAPI\obj\Debug\DemoCallAPI.pdb
