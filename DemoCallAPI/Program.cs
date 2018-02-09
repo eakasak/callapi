@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DemoCallAPI
 {
-    class Program
+    public class Program
     {
         private const string apiBaseUri = "https://scgchem-mdmdev.scg.com";
         private static string requestPath;
@@ -18,9 +18,9 @@ namespace DemoCallAPI
 
         static void Main(string[] args)
         {
-           
-            requestPath = "/Api/GDCEmployeeInfo/GetOrganizations";        
-            requestParam ="applicationId=FB2E5B93-AA4C-4531-9071-EE4AA42300DE&password=C@mputer1";
+
+            requestPath = "/Api/GDCEmployeeInfo/GetOrganizations";
+            requestParam = "applicationId=FB2E5B93-AA4C-4531-9071-EE4AA42300DE&password=C@mputer1";
             //For Get
             var res = HttpGet<List<Organizations>>(apiBaseUri, requestPath, requestParam);
 
@@ -33,6 +33,25 @@ namespace DemoCallAPI
             //var res = HttpPost<ApiRequest, List<Organizations>>(apiBaseUri, requestPath, req);
             Console.ReadKey();
         }
+
+        public List<Organizations> GetOrganizations()
+        {
+            requestPath = "/Api/GDCEmployeeInfo/GetOrganizations";
+            requestParam = "applicationId=FB2E5B93-AA4C-4531-9071-EE4AA42300DE&password=C@mputer1";
+            //For Get
+            var res = HttpGet<List<Organizations>>(apiBaseUri, requestPath, requestParam);
+            return res;
+        }
+
+        public List<Employee> GetEmployeeOrgChartByOrganizationId(int orgId)
+        {
+            requestPath = "/Api/GDCEmployeeInfo/GetMembersByOrganizationId";
+            requestParam = "applicationId=FB2E5B93-AA4C-4531-9071-EE4AA42300DE&password=C@mputer1&organizationId="+ orgId;
+            //For Get
+            var res = HttpGet<List<Employee>>(apiBaseUri, requestPath, requestParam);
+            return res;
+        }
+
         protected static T HttpGet<T>(string apiBaseUri, string requestPath, string requestParam)
         {
             try
@@ -177,6 +196,22 @@ namespace DemoCallAPI
             public DateTime? effectivedDate { get; set; }
             public string department_Ehr { get; set; }
             public string managerPosition { get; set; }
+        }
+
+        public class Employee
+        {
+            public int k2ChainOfCommandId { get; set; }
+            public int organizationId { get; set; }
+            public int organizationParentId { get; set; }
+            public string managerADAccount { get; set; }
+            public string managerEmail { get; set; }
+            public int approvalLevelId { get; set; }
+            public int serviceTypeId { get; set; }
+            public DateTime? createdDate { get; set; }
+            public int createdBy { get; set; }
+            public string e_FullName { get; set; }
+            public int managerOrganizationId { get; set; }
+            public string approvalLevelNameForPO { get; set; }
         }
 
     }
