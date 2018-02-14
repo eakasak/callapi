@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="org_external">
+    <Key>
+      <PropertyRef Name="common_id" />
+    </Key>
+    <Property Name="common_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="org_id" Type="nvarchar(max)" />
+    <Property Name="org_code" Type="nvarchar(max)" />
+    <Property Name="org_name" Type="nvarchar(max)" />
+    <Property Name="org_id_parent" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="org_external_member">
+    <Key>
+      <PropertyRef Name="common_id" />
+    </Key>
+    <Property Name="common_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="org_code" Type="nvarchar(max)" />
+    <Property Name="user_code" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="TestModelStoreContainer">
+    <EntitySet Name="org_external" EntityType="Self.org_external" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="org_external_member" EntityType="Self.org_external_member" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
