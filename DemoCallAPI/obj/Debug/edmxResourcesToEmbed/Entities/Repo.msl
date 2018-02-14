@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TestModelStoreContainer" CdmEntityContainer="TestEntities">
+    <EntitySetMapping Name="org_external">
+      <EntityTypeMapping TypeName="TestModel.org_external">
+        <MappingFragment StoreEntitySet="org_external">
+          <ScalarProperty Name="org_id_parent" ColumnName="org_id_parent" />
+          <ScalarProperty Name="org_name" ColumnName="org_name" />
+          <ScalarProperty Name="org_code" ColumnName="org_code" />
+          <ScalarProperty Name="org_id" ColumnName="org_id" />
+          <ScalarProperty Name="common_id" ColumnName="common_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="org_external_member">
+      <EntityTypeMapping TypeName="TestModel.org_external_member">
+        <MappingFragment StoreEntitySet="org_external_member">
+          <ScalarProperty Name="user_code" ColumnName="user_code" />
+          <ScalarProperty Name="org_code" ColumnName="org_code" />
+          <ScalarProperty Name="common_id" ColumnName="common_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
